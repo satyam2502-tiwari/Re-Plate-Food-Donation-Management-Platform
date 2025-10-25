@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Re-Plate – Food Donation Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🥗 Re-Plate</h1>
+    <p>Food Donation & Management Platform</p>
+  </header>
+
+  <!-- Donation Form -->
+  <section class="donation-form">
+    <h2>🍱 Add New Donation</h2>
+    <form id="donationForm">
+      <input type="text" id="foodName" placeholder="Food Name" required />
+      <input type="number" id="quantity" placeholder="Quantity (kg)" required />
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option>Cooked</option>
+        <option>Raw</option>
+        <option>Packaged</option>
+        <option>Beverages</option>
+      </select>
+      <input type="text" id="location" placeholder="Pickup Location" required />
+      <textarea id="details" placeholder="Additional Details"></textarea>
+      <button type="submit">Add Donation</button>
+    </form>
+  </section>
+
+  <!-- Dashboard -->
+  <section class="dashboard">
+    <h2>📊 Dashboard</h2>
+    <div class="stats">
+      <div class="card">
+        <h3 id="totalDonations">0</h3>
+        <p>Total Donations</p>
+      </div>
+      <div class="card">
+        <h3 id="activeDonations">0</h3>
+        <p>Active Donations</p>
+      </div>
+      <div class="card">
+        <h3 id="mealsServed">0</h3>
+        <p>Meals Served</p>
+      </div>
+      <div class="card">
+        <h3 id="foodSaved">0 kg</h3>
+        <p>Food Saved</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation List -->
+  <section class="donation-list">
+    <h2>📦 Active Donations</h2>
+    <div class="filter">
+      <label for="statusFilter">Filter by Status:</label>
+      <select id="statusFilter">
+        <option value="All">All</option>
+        <option value="Available">Available</option>
+        <option value="Claimed">Claimed</option>
+        <option value="Completed">Completed</option>
+      </select>
+    </div>
+    <div id="donationsContainer" class="donations"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Re-Plate | Bridging Hunger and Hope</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
